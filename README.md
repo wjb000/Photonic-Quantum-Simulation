@@ -1,41 +1,39 @@
-# Photonic Quantum Computer Simulation
+# Quantum Photonic Circuit (QPC) Simulator
 
-## Description
-This program is a photonic quantum computer simulator that leverages the Strawberry Fields quantum computing library to model and manipulate quantum states of light. It begins by preparing a quantum state in a two-mode Fock basis, followed by a sequence of quantum operations: a displacement operation, a squeezing operation, and a beamsplitter operation. These transformations result in a new quantum state. Lastly, the program computes and visualizes the Wigner function, a representation of the quantum state in phase space, for each mode.
+The `qpc.py` is a Python script that simulates a quantum photonic circuit. It provides a user interface to interactively build and simulate a quantum circuit using a selected set of quantum gates. The script is built on the [Strawberry Fields](https://strawberryfields.ai/) library developed by [Xanadu](https://www.xanadu.ai/) and utilizes [Streamlit](https://streamlit.io/) for the web-based interactive user interface.
 
-Users can specify the parameters for the displacement amplitude, displacement phase, squeezing parameter (r), and squeezing angle (phi), enabling them to explore how these different parameters influence the resulting quantum state.
+## Features
 
-## Requirements
-* Python 3.6 or higher
-* Strawberry Fields library
+1. **Circuit Configuration:** The user can select the number of quantum modes and quantum gates to use in the circuit.
 
-To install the Strawberry Fields library, use the pip package manager:
-```
-pip install strawberryfields
+2. **Gate Configuration:** For each gate, the user can select the gate type, the modes to apply the gate to, and the gate's parameters.
+
+3. **Simulation:** After defining the circuit and the gates, the user can simulate the quantum circuit, and the script will display the resulting quantum state.
+
+4. **Visualization:** The script visualizes the resulting state by showing the Wigner function and Fock distribution for each mode.
+
+## Prerequisites
+
+The script requires the following Python libraries:
+
+- numpy
+- matplotlib
+- seaborn
+- streamlit
+- strawberryfields
+
+You can install these libraries using pip:
+
+```bash
+pip install numpy matplotlib seaborn streamlit strawberryfields
 ```
 
 ## Usage
-To execute the program, run the following command:
 
-```
-python3 qpc.py
-```
+To start the simulator, run the `qpc.py` script with Streamlit:
 
-You will be asked to input the following parameters:
-
-* Displacement amplitude
-* Displacement phase
-* Squeezing parameter (r)
-* Squeezing angle (phi)
-
-For instance:
-
-```
-Enter the displacement amplitude: 1.0
-Enter the displacement phase: 0.5
-Enter the squeezing parameter r: 0.6
-Enter the squeezing angle phi: 1.57
+```bash
+streamlit run qpc.py
 ```
 
-Upon entering the parameters, the program will execute the simulation and display the Wigner function for each mode in a phase-space diagram (position vs momentum). This visualization represents the quantum state of each mode in the optical system post-transformation.
-
+This will open a web page in your default browser with the user interface of the quantum photonic circuit simulator. Use the sidebar on the left to define the circuit and the gates, then press the "Run Simulation" button to simulate the circuit and visualize the resulting quantum state.
