@@ -1,39 +1,47 @@
 # Quantum Photonic Circuit (QPC) Simulator
 
-The `qpc.py` is a Python script that simulates a quantum photonic circuit. It provides a user interface to interactively build and simulate a quantum circuit using a selected set of quantum gates. The script is built on the [Strawberry Fields](https://strawberryfields.ai/) library developed by [Xanadu](https://www.xanadu.ai/) and utilizes [Streamlit](https://streamlit.io/) for the web-based interactive user interface.
+The `qpc.py` is a Python script that simulates quantum photonic circuits. It provides a user-friendly, interactive interface to build and simulate quantum circuits using a curated set of quantum gates. This script leverages the Strawberry Fields library by Xanadu and uses Streamlit to facilitate a web-based, interactive user interface.
 
 ## Features
 
-1. **Circuit Configuration:** The user can select the number of quantum modes and quantum gates to use in the circuit.
+1. **Dynamic Circuit Configuration:** Users can dynamically configure the number of quantum modes and gates directly through the user interface.
 
-2. **Gate Configuration:** For each gate, the user can select the gate type, the modes to apply the gate to, and the gate's parameters.
+2. **Flexible Gate Configuration:** Each gate can be configured interactively, allowing users to select the gate type, apply it to specific modes, and set individual parameters.
 
-3. **Simulation:** After defining the circuit and the gates, the user can simulate the quantum circuit, and the script will display the resulting quantum state.
+3. **Interactive Simulation:** The simulator offers a "Run Simulation" button that processes the user-defined circuit configurations and computes the resulting quantum state.
 
-4. **Visualization:** The script visualizes the resulting state by showing the Wigner function and Fock distribution for each mode.
+4. **Advanced Visualization:** Post-simulation, the script provides detailed visualizations, including:
+   - **Wigner Function:** Displays the Wigner function for each mode in the circuit.
+   - **Fock State Probabilities:** Shows the probability distribution across different Fock states for each mode.
+
+5. **Responsive Design:** The Streamlit interface is designed to be responsive and intuitive, providing real-time feedback and updates as users configure and simulate circuits.
 
 ## Prerequisites
 
-The script requires the following Python libraries:
+Before running the simulator, ensure you have the following Python libraries installed:
 
-- numpy
-- matplotlib
-- seaborn
-- streamlit
-- strawberryfields
+- **numpy**
+- **matplotlib**
+- **seaborn**
+- **streamlit**
+- **strawberryfields**
 
-You can install these libraries using pip:
+These dependencies can be installed via pip using the following command:
 
 ```bash
 pip install numpy matplotlib seaborn streamlit strawberryfields
 ```
 
+## Installation
+
+To get started with the Quantum Photonic Circuit Simulator, clone the repository or download the `qpc.py` file directly. Ensure all dependencies are installed as listed above.
+
 ## Usage
 
-To start the simulator, run the `qpc.py` script with Streamlit:
+To launch the simulator, use the following command:
 
 ```bash
 streamlit run qpc.py
 ```
 
-This will open a web page in your default browser with the user interface of the quantum photonic circuit simulator. Use the sidebar on the left to define the circuit and the gates, then press the "Run Simulation" button to simulate the circuit and visualize the resulting quantum state.
+This command starts a local web server and opens the interactive simulator in your default web browser. Follow the on-screen instructions to configure and simulate your quantum photonic circuits.
